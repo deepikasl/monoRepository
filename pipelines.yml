@@ -1,5 +1,5 @@
 resources:
-  - name: myRepo
+  - name: myRepoo
     type: GitRepo
     configuration:
       path: deepikasl/jfrog_pipelines
@@ -9,7 +9,7 @@ resources:
       buildOn:
         commit: false
         pullRequestCreate: false
-  - name: newRepo
+  - name: newRepoo
     type: GitRepo
     configuration:
       path: deepikasl/jfrog_pipelines
@@ -307,7 +307,7 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: myRepo
+            - name: myRepoo
         execution:
           onExecute:
             - echo "manaul_trigger"
