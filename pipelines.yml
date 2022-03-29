@@ -301,9 +301,9 @@ resources:
         include: ^{{gitBranch}}$
  
 pipelines:
-  - name: demo_manual
+  - name: demo_manual_1
     steps:
-      - name: manual_trigger
+      - name: manual_trigger_1
         type: Bash
         configuration:
           inputResources:
