@@ -1,0 +1,19 @@
+pipelines:
+  - name: demo_manual_1
+    steps:
+      - name: step11
+        type: Bash
+        configuration:
+          integrations:
+            - name: deepikaGithub
+        execution:
+          onExecute:
+            - echo "here"
+      - name: step22
+        type: Bash
+        configuration:
+          inputSteps:
+            - name: step11
+        execution:
+          onExecute:
+            - echo "here"
